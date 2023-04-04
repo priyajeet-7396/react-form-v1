@@ -2,9 +2,10 @@
 import React from 'react'
 import useform from './useForm';
 import validate from './validateInfo';
+import './Form.css';
 
-const FormSighnup = () => {
-    const{handleChange,values , handleSubmit, errors } = useform(validate);
+const FormSighnup = ({submitForm}) => {
+    const{handleChange,values , handleSubmit, errors } = useform(submitForm,validate); //where error started
   return (
     <div className='form-content-right' >
         <form className="form" onSubmit={handleSubmit}>
